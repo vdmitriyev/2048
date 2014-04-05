@@ -1,74 +1,97 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <title>2048 Alphabet Version</title>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="2048 Alphabet Version : A small clone of [2048]" />
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/tile-color-changed.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>2048 Alphabet Version</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/vdmitriyev/2048">View on GitHub</a>
-
-          <h1 id="project_title">2048 Alphabet Version</h1>
-          <h2 id="project_tagline">A small clone of [2048]</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/vdmitriyev/2048/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/vdmitriyev/2048/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="2048-alphabet-version" class="anchor" href="#2048-alphabet-version"><span class="octicon octicon-link"></span></a>2048 Alphabet Version</h1>
-
-<p>A small clone of <a href="https://github.com/gabrielecirulli/2048">2048</a>.
-In current version of 2048 you can play with letters.</p>
-
-<h3>
-<a name="credicts" class="anchor" href="#credicts"><span class="octicon octicon-link"></span></a>Credicts</h3>
-
-<ul>
-<li>
-<a href="https://github.com/gabrielecirulli">gabrielecirulli</a> original fork</li>
-<li>
-<a href="https://github.com/TimPetricola">TimPetricola</a> added best score storage</li>
-<li>
-<a href="https://github.com/chrisprice">chrisprice</a> added custom code for swipe handling on mobile</li>
-<li>
-<a href="https://github.com/elektryk">elektryk</a> made swipes work on Windows Phone</li>
-<li>
-<a href="https://github.com/mgarciaisaia">mgarciaisaia</a> addes support for Android 2.3</li>
-</ul><p>Many thanks to <a href="https://github.com/rayhaanj">rayhaanj</a>, <a href="https://github.com/Mechazawa">Mechazawa</a>, <a href="https://github.com/grant">grant</a>, <a href="https://github.com/remram44">remram44</a> and <a href="https://github.com/ghoullier">ghoullier</a> for the many other good contributions.</p>
-
-<h2>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
-
-<p>2048 is licensed under the <a href="https://github.com/gabrielecirulli/2048/blob/master/LICENSE.txt">MIT license.</a></p>
-      </section>
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">2048 Alphabet Version maintained by <a href="https://github.com/vdmitriyev">vdmitriyev</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
     </div>
 
-    
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <p>
+		<strong class="important">Note:</strong> This site is NOT the official version of "2048" game.
+    </p>
+    <hr>
+    <p>
+		Based on fork from of original "2048" game from <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a>
+    </p>
+  </div>
 
-  </body>
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
 </html>
