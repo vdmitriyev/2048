@@ -1,6 +1,6 @@
 # 2048 Alphabet Version
 A small clone of [2048](https://github.com/gabrielecirulli/2048).
-In current version of 2048 you can play with letters.
+In [current version of 2048](http://vdmitriyev.github.io/2048/) you can play with letters.
 
 ### Credicts
  - [gabrielecirulli](https://github.com/gabrielecirulli) original fork
